@@ -1,16 +1,23 @@
 ﻿<html>
 <head>
-	<title>Main Page Gravity Simulator</title>
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+	<title>Gravity Simulator: RKutte</title>
+	<meta charset="charset=UTF-8"/>
     <meta name="description" content="Gravity Simulator" />
-    <meta name="keywords" content="euler, verlet, RungeKutta"/>
+    <meta name="keywords" content="eiler, verlet, rungekutta"/>		
 	<link type="text/css" rel="stylesheet" href="css/style.css" />
+	<link type="text/css" rel="stylesheet" href="css/jquery.lightbox-0.5.css" />	
+	<script type="text/javascript" src="js/jquery-2.0.2.js"></script>
+	<script type="text/javascript" src="js/jquery.lightbox-0.5.js"></script>
+	<script type="text/javascript" src="js/smile.js"></script>
+	<script type="text/javascript" src="js/compressed.js"></script>
+    <script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/helper.js"></script>
 </head>
 <body id="main">
 	<table class="b" bordercolor="#F5F5DC">
 	<tr>
 		<td>
-		<div id="content">
+			<div id="content">
             <div class="navigation" id="nav">
                 <div class="item user">
                     <img src="images/bg_user.png" alt="" width="199" height="199" class="circle"/>
@@ -47,16 +54,16 @@
 					</ul>
                 </div>
 			</div>
-		</div>
+			</div>
 		</td>
 	</tr>
 	</table>
 	<p class="kutte">
-		Данное web-приложение позволяет тестировать различные методы интеграции для гравитационного моделирования. Результаты могут быть проверены в интерактивном режиме. Наведите мышку над иллюстрацей, чтобы начать имитацию гравитации или щелкните рисунок, чтобы сбросить симуляцию.
-		Предоставлена возможность выбирать методы интегрирования и узнать небольшую информацию о каждом методе.
-		Дозволены следующие методы: Метод Эйлера( метод Эйлера, метод Эйлера с шагом), Метод Верле, Метод Рунге-Кутты(Метод Рунге-Кутты, Метод Рунге-Кутты с шагом)
-	</p>
-	<script type="text/javascript" src="js/smile.js"></script>
+		<span class="shadowtext">The R-Kutte method</span></br></br>	
+		Методы Рунге — Кутты — важное семейство численных алгоритмов решения обыкновенных дифференциальных уравнений и их систем. Данные итеративные методы явного и неявного приближённого вычисления были разработаны около 1900 года немецкими математиками К. Рунге и М. В. Куттой.
+		Формально, методом Рунге — Кутты является модифицированный и исправленный метод Эйлера, они представляют собой схемы второго порядка точности. Существуют стандартные схемы третьего порядка, не получившие широкого распространения. Наиболее часто используется и реализована в различных математических пакетах (Maple, MathCAD, Maxima) стандартная схема четвёртого порядка. Иногда при выполнении расчётов с повышенной точностью применяются схемы пятого и шестого порядков. Построение схем более высокого порядка сопряжено с большими вычислительными трудностями. Методы седьмого порядка должны иметь по меньшей мере девять стадий, в схему восьмого порядка входит 11 стадий. Хотя схемы девятого порядка не имеют большой практической значимости, неизвестно, сколько стадий необходимо для достижения этого порядка точности. Аналогичная задача существует для схем десятого и более высоких порядков.
+	</p>	
+
     <script type="text/javascript" src="js/jquery.min.js"></script>
     <script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
     <script type="text/javascript">
@@ -73,10 +80,11 @@
                 },500,'easeOutBack',function(){
                     $(this).parent().find('ul').fadeIn(700);
                 });
+
                 $this.find('a:first,h2').addClass('active');
             },
             function () {
-				var $this = $(this);
+                var $this = $(this);
                 $this.find('ul').fadeOut(500);
                 $this.find('img').stop().animate({
                     'width'     :'52px',
@@ -85,11 +93,10 @@
                     'left'      :'0px',
                     'opacity'   :'0.1'
                 },5000,'easeOutBack');
-
                 $this.find('a:first,h2').removeClass('active');
             }
-        );
+			);
         });
     </script>
-</body>
+	</body>
 </html>
