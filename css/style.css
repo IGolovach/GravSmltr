@@ -4,7 +4,12 @@
 }
 body {
 	background: url(../images/main.jpg);
-	background-position: relative;
+	background-repeat: no-repeat;
+	-moz-background-size: 100%; /* Firefox 3.6+ */
+    -webkit-background-size: 100%; /* Safari 3.1+ и Chrome 4.0+ */
+    -o-background-size: 100%; /* Opera 9.6+ */
+    background-size: 100%; /* Современные браузеры */
+    background-attachment: fixed;
 	/*background-color: #c7b39b; /* Цвет фона */
 	text-align: center;
 	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -32,10 +37,10 @@ table.b {
 }
 table.a{
 	background: rgba(10, 139, 237, 0.1);
-	height: 100%; 
 	width: 30%; 
 	border-spacing: 0; 
 	float:left;
+	padding:0 0 0 5%;
  }
 table.c{
 	background: rgba(107, 93, 111, 0.3);
@@ -44,6 +49,11 @@ table.c{
 	border-spacing: 0;  
 	float:right;
 }  
+table.data{
+	background: rgba(10, 139, 237, 0.1); 
+	width: 70%;
+	text-align: right;
+ }
 p.e{
 	background: rgba(10, 139, 237, 0.1);
 	text-shadow: 1px 1px 1px white, 0 0 4em white;
