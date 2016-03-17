@@ -13,35 +13,40 @@ body {
 	/*background-color: #c7b39b; /* Цвет фона */
 	text-align: center;
 	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-	width: 100%;
 }
 #content{
     margin:0 auto;
+	float:center;
 }
 main { 
 	position: relative; 
 	margin: 0 auto; 
-	max-width: 1200px; 
 	padding-right: 310px; 
 }
 aside { 
 	width: 300px; 
 	position: absolute; top: 0; right: 0; 
 }
+table.a{
+	background: rgba(10, 139, 237, 0.1);
+	width: 30%; 
+	height: 100%;
+	float:left;
+	padding:0 0 0 5%;
+	border-right: 1px solid #fff;
+}
+table.a td {
+    padding: 5px;
+    vertical-align: top;
+   }
 table.b {
 	background: rgba(145, 134, 153, 0.2);
 	width: 100%;
 	height: 20%; 
 	position: relative; 
 	float:top;  
+	border: 1px solid #fff;
 }
-table.a{
-	background: rgba(10, 139, 237, 0.1);
-	width: 30%; 
-	border-spacing: 0; 
-	float:left;
-	padding:0 0 0 5%;
- }
 table.c{
 	background: rgba(107, 93, 111, 0.3);
 	height: 100%; 
@@ -49,11 +54,19 @@ table.c{
 	border-spacing: 0;  
 	float:right;
 }  
-table.data{
+div.data{
 	background: rgba(10, 139, 237, 0.1); 
-	width: 70%;
-	text-align: right;
- }
+	text-align: center;
+	height: 100%;
+	min-width: 30%;
+}
+textarea{  
+	width: 70%;  
+	max-width: 2000px;
+	min-width: 500px;
+	height: 30%;    
+	resize: both;
+}
 p.e{
 	background: rgba(10, 139, 237, 0.1);
 	text-shadow: 1px 1px 1px white, 0 0 4em white;
@@ -78,10 +91,9 @@ p.hover{
 	margin: 10px 5px;
 	padding: 1em;
 	border: 1px solid #ccc;
-	box-shadow: 10px -15px 5px 5px rgba(0, 0, 0, .2);
+	box-shadow: 3px -1px 5px 3px rgba(0, 0, 0, .2);
 }
 .navigation{
-    margin: 0px auto;
     font-family: "Trebuchet MS", sans-serif;
     font-size: 18px;
     font-style: normal;
@@ -89,17 +101,15 @@ p.hover{
     letter-spacing: 1.4px;
 }
 .navigation .item{
-    position:absolute;
+	position: absolute; 
 }
 .user{
     top:50%;
-    left:5%;
-	
+    left:5%;	
 }
 .home{
    top:20%;
-   left:25%;
-    
+   left:25%;  
 }
 .shop{
    top:20%;
