@@ -84,29 +84,24 @@
 		</form>
 		</td>
 	</tr>
-	</table>		
-	<p class="shadowtext" align="center">Simple Verlet method</p>
-	<canvas id="verlet" width="500em" height="400em"></canvas>
-	<table class="data">
-	<tr>
-		<td>
-			<p>Acceleration as x</p> <input type="text" id="feedbackAccX" value="" /><br>
-			<p>Acceleration as y</p><input type="text" id="feedbackAccY" value="" /><br>
-		</td>
-		<td>
-			<p>Previous as x</p> <input type="text" id="feedbackPreviousIaddX" value="" /><br>
-			<p>Previous as y</p> <input type="text" id="feedbackPreviousIaddY" value="" /><br>
-		</td>
-		<td>
-			<p>Position as x</p> <input type="text" id="feedbackPositionIaddX" value="" /><br>
-			<p>Position as y</p> <input type="text" id="feedbackPositionIaddY" value="" /><br>
-		</td>
-	</tr>
 	</table>
-	<br>
-	<p>All data in real time</p>
-	<textarea id="bugaga" cols="150" rows="20"/></textarea>
-	<br>		
+	<div class="data">
+		<p class="shadowtext" align="center">Simple Verlet method</p>
+		<canvas id="verlet" width="500em" height="400em"></canvas>
+		<br>
+		<div class="">
+				Acceleration as x <input type="text" id="feedbackAccX" value="" readonly/>
+				Velocity as x <input type="text" id="feedbackVelocityIaddX" value="" readonly/>
+				Position as x <input type="text" id="feedbackPositionIaddX" value="" readonly/><br>
+	
+				Acceleration as y <input type="text" id="feedbackAccY" value="" readonly/>
+				Velocity as y <input type="text" id="feedbackVelocityIaddY" value="" readonly/>
+				Position as y <input type="text" id="feedbackPositionIaddY" value="" readonly/><br>
+		</div>
+		<br>
+		<textarea id="bugaga" readonly></textarea>
+		<p>All data in real time</p>
+	</div>		
 	<script> 
 function updateData(){
 position_x=parseInt($("#position_x").val());
