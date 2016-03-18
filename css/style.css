@@ -67,17 +67,13 @@ textarea{
 	height: 30%;    
 	resize: both;
 }
-p.e{
-	background: rgba(10, 139, 237, 0.1);
-	text-shadow: 1px 1px 1px white, 0 0 4em white;
-	border-spacing: 10px; 
-}
-p.kutte{
+p.about{
 	background: rgba(10, 139, 237, 0.1);
 	text-shadow: 1px 1px 1px white, 0 0 4em white; 
 	border-spacing: 10px; 
 	float:center;
-	margin-top:10%;
+	margin: 0 10% ;
+	padding: 3%;
 	text-align:center;
 }
 .shadowtext {
